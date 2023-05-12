@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from '@mui/material';
 //components
 import Navbar from './components/Navbar';
-import Khadamat from './components/khadamat';
+import Service from './components/Service';
 import Reason from './components/Reason';
 import SomeService from './components/SomeService';
 import Reservation from './components/Reservation.jsx';
@@ -12,7 +12,7 @@ const App = () => {
   return (
       <div>
         <Navbar />
-        <Khadamat />
+        <Service />
         <Reason />
         <SomeService />
         <Reservation />

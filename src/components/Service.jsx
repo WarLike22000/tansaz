@@ -6,9 +6,9 @@ import women from '../assets/women.png';
 import beauty from '../assets/beauty.png';
 import fat from '../assets/obesity.png';
 //styles 
-import styles from './Khadamat.module.css';
+import styles from './Service.module.css';
 
-const Khadamat = () => {
+const Service = () => {
     return (
         <div className={styles.container}>
             <div>
@@ -35,4 +35,4 @@ const Khadamat = () => {
     );
 };
 
-export default Khadamat;
+export default Service;
