@@ -1,0 +1,118 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../assets/20230512220841_[fpdl.in]_smart-skilled-cosmetologist-using-modern-device-while-doing-hydrafacial-procedure_259150-9197_large.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 620px;
+}
+
+
+.left {
+    margin: 90px 25px;
+    background-color: rgba(243, 69, 69, 0.774);
+    padding: 20px;
+    border-radius: 15px;
+    width: auto;
+}
+
+.left div p {
+    margin-right: 8px;
+    width: 100%;
+}
+
+.left h2 {
+    margin: 0 25px 50px 0;
+    font-size: 2.2rem;
+    color: #fff;
+}
+
+.leftBottom {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.leftBottom div {
+    width: 310px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 17px 20px;
+    cursor: pointer;
+
+}
+
+.leftBottom div p {
+    color: rgb(255, 255, 255);
+    font-size: 21px;
+}
+
+.check {
+    color: rgb(255, 255, 255);
+}
+
+.leftBottom div:hover .check {
+    transform: scale(1.2);
+    color: rgb(191, 41, 41);
+}
+
+.leftBottom {
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 600;
+    width: 100%;
+    margin: 10px auto;
+}
+
+@media(max-width: 1104px) {
+    .left h2 {
+        font-size: 1.5rem;
+    }  
+}
+
+@media(max-width: 790px) {
+    .leftBottom{
+        justify-content: flex-start;
+    }
+    .leftBottom div {
+        width: 250px;
+    }
+}
+
+@media(max-width: 700px) {
+    .container {
+        flex-direction: column;
+    }
+    .leftBottom div p {
+        font-size: 15px;
+    }
+    .leftBottom div {
+        width: 200px;
+    }
+}
+
+@media(max-width: 569px) {
+    .leftBottom div {
+        width: 190px;
+    }
+}
+
+@media(max-width: 368px) {
+    .left h2 {
+        margin: 10px 20px;
+        font-size: 1rem;
+    }
+    .left p {
+        font-size: 12px;
+    }
+    .container img {
+        display: none;
+    }
+    .leftBottom div p {
+        font-size: 13px;
+    }
+    .leftBottom div {
+        width: fit-content;
+    }
+}
