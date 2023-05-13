@@ -1,5 +1,4 @@
 import React from 'react';
-import { Container } from '@mui/material';
 //components
 import Navbar from './components/Navbar';
 import Service from './components/Service';
@@ -10,7 +9,7 @@ import Footer from './components/Footer';
 
 const App = () => {
   return (
-      <div>
+      <div style={{maxWidth: '1400px', margin: 'auto'}}>
         <Navbar />
         <Service />
         <Reason />
