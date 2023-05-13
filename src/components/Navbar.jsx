@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Login, AccountBalance, Add, AddIcCall, Call, ExpandLess, ExpandMore, HeadsetMic, Help, Home, ImportContacts, Menu } from '@mui/icons-material';
 //assets
 import logo from '../assets/لوگو.png';
 import instagram from '../assets/instagram (2).png';
-import instagramCol from '../assets/instagram (2).png';
+import instagramCol from '../assets/instagram (1).png';
 import whatsapp from '../assets/whatsapp.png';
 import whatsappCol from '../assets/whatsapp (3).png';
 //styles
@@ -16,6 +16,8 @@ const Navbar = () => {
 
     const [open, setOpen] = useState(false);
     const [menu, setMenu] = useState(false);
+
+    const [ani, setAni] = useState(false);
     
     const [colIns, setColIns] = useState(false);
     const [colWhat, setColWhat] = useState(false);
@@ -27,6 +29,16 @@ const Navbar = () => {
         setMenu(open);
       };
     
+      useEffect(() => {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                setAni(true);
+            } else {
+                setAni(false);
+            }
+        });
+    }, []);
+      
     return (
         <>
         <div className={styles.mainContainer}>
@@ -41,13 +53,13 @@ const Navbar = () => {
                               </ListItemButton>
                               <Divider />
                               <ListItemButton sx={{m: '10px 0'}} onClick={() => setMenu(false)}>
-                                <Help sx={{ml: 1, color: '#fff'}} fontSize='small' />
-                                <Link>سوالات متداول</Link>
+                                <ImportContacts sx={{ml: 1, color: '#fff'}} fontSize='small' />
+                                <Link>مجله تن ساز</Link>
                               </ListItemButton>
                               <Divider />
                               <ListItemButton sx={{m: '10px 0'}} onClick={() => setMenu(false)}>
-                                <ImportContacts sx={{ml: 1, color: '#fff'}} fontSize='small' />
-                                <Link>مجله تن ساز</Link>
+                                <Help sx={{ml: 1, color: '#fff'}} fontSize='small' />
+                                <Link>سوالات متداول</Link>
                               </ListItemButton>
                               <Divider />
                               <ListItemButton sx={{m: '10px 0'}} onClick={() => setMenu(false)}>
@@ -58,45 +70,44 @@ const Navbar = () => {
                               </Box>
                             </List>
                         </Drawer>
-            <div className={styles.topNav}>
-                <div>
-                    <img src={logo} alt='logo' />
-                </div>
-                <div className={styles.support}>
-                    <div className={styles.phone}>
-                        <HeadsetMic fontSize='large' color='action' />
-                        <p>تلفن: 07137369980</p>
+                    <div className={ani ? styles.phoneAnimation : styles.phone}>
+                            <HeadsetMic fontSize='large' className={styles.headSet} />
                     </div>
-                    <div className={styles.nobat}>
-                        <Add />
-                        <p>رزرو نوبت</p>
-                    </div>
-                </div>
-            </div>
         </div>
             <div className={styles.bottomNav}>
-                <nav className={styles.menu}>
-                    <IconButton onClick={() => setMenu(!menu)}>
-                        <Menu sx={{color: '#fff'}} fontSize='large' />
-                    </IconButton>
-                </nav>
-                <div className={styles.home}>
-                    <Home sx={{ml: 1, color: '#fff'}} fontSize='small' />
-                    <Link>خانه</Link>
+                <div className={styles.rightBottomNav}>
+                    <div className={styles.topNav}>
+                        <img src={logo} alt='logo' />
+                    </div>
+                    <nav className={styles.menu}>
+                        <IconButton onClick={() => setMenu(!menu)}>
+                            <Menu sx={{color: 'rgb(214, 61, 61)'}} fontSize='large' />
+                        </IconButton>
+                    </nav>
+                    <div className={styles.topNav2}>
+                        <img src={logo} alt='logo' />
+                    </div>
+                    <div className={styles.home}>
+                        <Home sx={{ml: 1, color: 'rgb(214, 61, 61)'}} fontSize='small' />
+                        <Link>خانه</Link>
+                    </div>
+                    <div className={styles.mag}>
+                        <ImportContacts sx={{ml: 1, color: 'rgb(214, 61, 61)'}} fontSize='small' />
+                        <Link>مجله تن ساز</Link>
+                    </div>
+                    <div className={styles.question}>
+                        <Help sx={{ml: 1, color: 'rgb(214, 61, 61)'}} fontSize='small' />
+                        <Link>سوالات متداول</Link>
+                    </div>
+                    <div className={styles.call}>
+                        <Call sx={{ml: 1, color: 'rgb(214, 61, 61)'}} fontSize='small' />
+                        <Link>تماس با ما</Link>
+                    </div>
+                    <div className={styles.nobat}>
+                            <Add />
+                            <p>رزرو نوبت</p>
+                    </div>
                 </div>
-                <div className={styles.question}>
-                    <Help sx={{ml: 1, color: '#fff'}} fontSize='small' />
-                    <Link>سوالات متداول</Link>
-                </div>
-                <div className={styles.mag}>
-                    <ImportContacts sx={{ml: 1, color: '#fff'}} fontSize='small' />
-                    <Link>مجله تن ساز</Link>
-                </div>
-                <div className={styles.call}>
-                    <Call sx={{ml: 1, color: '#fff'}} fontSize='small' />
-                    <Link>تماس با ما</Link>
-                </div>
-                    <p>شماره تماس: 09336074147</p>
                 <div className={styles.relation}>
                         <div onMouseEnter={() => setColIns(true)} onMouseLeave={() => setColIns(false)}>
                             <img src={colIns ? instagramCol : instagram} alt='ins' />

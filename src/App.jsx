@@ -1,6 +1,7 @@
 import React from 'react';
 //components
 import Navbar from './components/Navbar';
+import Slider from './components/Slider';
 import Service from './components/Service';
 import Reason from './components/Reason';
 import SomeService from './components/SomeService';
@@ -11,6 +12,7 @@ const App = () => {
   return (
       <div style={{maxWidth: '1400px', margin: 'auto'}}>
         <Navbar />
+        <Slider />
         <Service />
         <Reason />
         <SomeService />
