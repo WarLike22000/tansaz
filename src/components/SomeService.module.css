@@ -37,6 +37,11 @@
     padding: 80px 60px;
     border-radius: 15px;
     width: 100%;
+    outline: 1px solid rgb(219, 217, 217);
+}
+
+.tanSaz:hover {
+    outline-offset: -12px;
 }
 
 .container div p {
