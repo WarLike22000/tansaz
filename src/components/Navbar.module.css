@@ -183,6 +183,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: fit-content;
+    height: 40px;
     padding: 0 7px;
     border-radius: 5px;
 }
@@ -191,6 +193,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: fit-content;
+    height: 40px;
     padding: 0 7px;
     border-radius: 5px;
 }
@@ -211,35 +215,35 @@
 
 .show {
     position: absolute;
-    top: 50px;
+    top: 60px;
     background-color: gray;
     padding: 5px 10px;
     border-radius: 10px;
     color: #fff;
     font-weight: 500;
     font-size: 13px;
-    left: 74px;
+    left: 55px;
     display: flex;
     animation: fade 0.3s forwards;
 }
 
 .notShow {
     position: absolute;
-    top: 50px;
+    top: 60px;
     background-color: gray;
     padding: 5px 10px;
     border-radius: 10px;
     color: #fff;
     font-weight: 500;
     font-size: 13px;
-    left: 74px;
+    left: 55px;
     display: none;
 }
 
 .showWh {
     position: absolute;
-    top: 50px;
-    left: 15px;
+    top: 60px;
+    left: 0;
     background-color: gray;
     padding: 5px 10px;
     border-radius: 10px;
@@ -252,8 +256,8 @@
 
 .notShowWh {
     position: absolute;
-    top: 50px;
-    left: 15px;
+    top: 60px;
+    left: 0;
     background-color: gray;
     padding: 5px 10px;
     border-radius: 10px;
